@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Productos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD de Productos</h1>
+    <form id="product-form">
+      <input type="text" id="name" placeholder="Nombre del producto" required>
+      <input type="number" id="price" placeholder="Precio" required min="0" step="0.01">
+      <input type="file" id="image" accept="image/*">
+      <textarea id="description" placeholder="Descripción" required></textarea>
+      <button type="submit">Agregar Producto</button>
+      <button type="button" id="cancel-edit" style="display:none;">Cancelar Edición</button>
+    </form>
+    <table id="products-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Productos aparecerán aquí -->
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
